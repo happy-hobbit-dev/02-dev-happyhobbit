@@ -1,5 +1,8 @@
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
+import * as path from 'path';
+import { defineConfig } from 'vite'
+import { imagetools } from 'vite-imagetools'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,6 +23,13 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
         vite: ({
+			plugins: [imagetools],
+			resolve: {
+				alias: {
+					$img: path.resolve('src/images'),
+					'@sveltejs/site-kit': path.resolve('../../packages/site-kit/src/lib')
+				}
+			},
 		      ssr: {
 			external: ['firebase']
 		}
