@@ -1,3 +1,9 @@
+<svelte:head>
+
+
+</svelte:head>
+
+
 <script>
     import HappyHobbit from '$lib/HappyHobbitSVG.svelte'
 	

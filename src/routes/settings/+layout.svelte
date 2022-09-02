@@ -1,6 +1,5 @@
 <!-- src/routes/settings/__layout.svelte -->
 
-
 <div class="submenu">
     <ul>
         <li><a href="/settings/compliance/">Compliance</a>
